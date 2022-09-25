@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>递增运算符</title>
+    <script>
+        // 
+        var a = 10;
+        ++a; //++a 11 a=11
+        var b = ++a + 2; //++a 12 a=12;
+        console.log(b); //14
+        console.log("++++++++++++++++++++++++++");
+
+        var c = 10;
+        c++; //c++ 11, c=11
+        var d = c++ + 2; //c++ 11 c=12
+        console.log(d); //13
+        console.log("++++++++++++++++++++++++++");
+
+        var e = 10;
+        var f = e++ + ++e; //e++ 10; e=11;++e 12;e=12
+        console.log(f); //22
+
+        //
+        console.log("++++++++++++++++++++++++++");
+        var a = 20;
+        ++a; //++a 21;a=21
+        console.log(a); //21
+
+        var b = 20;
+        b++; //b++ 21;b=21
+        console.log(b); //21
+
+        var c = 10;
+        console.log(++c); //11
+        console.log(c); //11
+
+        var d = 10;
+        console.log(d++); //10
+        console.log(d); //11
+        console.log("++++++++++++++++++++++++++");
+        // eg:
+        var a = 10;
+        a = (a++) + (++a); //a++ 10;a=11;++a 12;a+12
+        console.log(a); //22
+
+        var obj = {
+            age: 20
+        };
+        var a = 100;
+        var c = -a++ + obj.age++; //a++ 100;a=101;obj.age++ 20;obj.age=21;
+        console.log(c); //-80
+        console.log(obj.age); //21
+        console.log("++++++++++++++++++++++++++");
+        //
+        var a = 0.1,
+            b = a++ + a, //a++ 0.1 a=1.1
+            c = a-- + b; //a-- 1.1
+        console.log(a, b, c); //a=0.1,b=1.2,c=2.3
+        console.log("++++++++++++++++++++++++++");
+        //
+        var a = 2;
+        var b = 3;
+        var c = (++a) + (b++) + b + (a++) - a; //++a 3 a=3 ;b++ 3;b=4;a++ 3;a=4
+        console.log(c); //9
+        console.log("++++++++++++++++++++++++++");
+        //
+        var a = 2;
+        console.log(a++ + a + ++a + a + --a + a-- + ++a); //22
+        //a++ 2;a=3;++a 4; a=4;--a=3;a=3;a-- 3;a=2;++a=3;a=3
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
