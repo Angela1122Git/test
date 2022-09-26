@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random-猜数字</title>
+    <script>
+    
+        //要求用户猜1~50之间的数字,但是只有10次机会
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var random = getRandom(1, 50);
+        for (var i = 1; i <= 10; i++) {
+            if (i == 10) {
+                alert("你失败了");
+            } else {
+                var num = prompt("请输入1~50之间的数,你只有" + (10 - i) + "次机会");
+                if (num > random) {
+                    alert("你猜得太大了");
+                } else if (num < random) {
+                    alert("你猜得太小了")
+                } else if (num == random) {
+                    alert("你猜对了");
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
